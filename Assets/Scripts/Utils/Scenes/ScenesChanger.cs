@@ -15,13 +15,10 @@ namespace Utils.Scenes
         private static string _loadingSceneName;
         private static bool _changingStarted;
 
-
         public static void GotoScene(string sceneName)
         {
             if (IsLoading && _loadingSceneName == sceneName)
                 return;
-
-            Log.Info(typeof(ScenesChanger), $"Go to {sceneName}");
 
             IsLoading = true;
             _loadingSceneName = sceneName;
@@ -49,13 +46,13 @@ namespace Utils.Scenes
         {
             _loadingSceneName = default;
             _changingStarted = false;
-            
+
             CurrentChangeOperation = null;
             IsLoading = false;
-            
+
             SceneLoadedEvent?.Invoke();
         }
-        
+
         private static void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
         {
             SceneManager.sceneLoaded -= OnSceneLoaded;

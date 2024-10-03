@@ -272,6 +272,8 @@ GameObject:
   - component: {fileID: 2040505402}
   - component: {fileID: 2040505405}
   - component: {fileID: 2040505406}
+  - component: {fileID: 2040505407}
+  - component: {fileID: 2040505408}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -392,3 +394,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activityType: 1
   mainCamera: {fileID: 2040505403}
+--- !u!114 &2040505407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040505401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9edeabb97f259b3428be85d501aace8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config:
+    PanSpeed: 5
+    SmoothTime: 0.3
+  boundary:
+    MinX: -8
+    MaxX: 8
+    MinY: -3
+    MaxY: 2
+--- !u!114 &2040505408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040505401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c13e5dcf56149e94daf06a0f4d38f12d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraController: {fileID: 2040505407}
